@@ -35,7 +35,7 @@ import java.util.Map;
 public class JWT {
  
 	// 密钥key
-	private static final String SECRET_KEY = "xxxxxxx";
+	private static final String SECRET_KEY = "dongbao";
 	
 	/**
 	 * 构造密钥
@@ -111,7 +111,8 @@ public class JWT {
 	public static void main(String[] args) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("userId", 10000);
-		String jwt = createJWT("", "", System.currentTimeMillis() + 30*60*1000, map);
+		//String jwt = createJWT("", "", System.currentTimeMillis() + 30*60*1000, map);
+		String jwt = createJWT("abc", "", System.currentTimeMillis() + 30*60*1000, map);
 		System.out.println(jwt);
 		
 		/**
